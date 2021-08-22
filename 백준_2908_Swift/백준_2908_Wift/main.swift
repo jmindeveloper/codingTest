@@ -13,6 +13,8 @@ let input = readLine()!.split(separator: " ").map { Int(String($0.reversed()))! 
 
 print(max(input[0], input[1]))
 
+// 성공
+
 /*
 
  max(_ x:_ y:)
