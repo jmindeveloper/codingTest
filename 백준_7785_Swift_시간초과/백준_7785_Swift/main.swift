@@ -25,3 +25,5 @@ Array(0..<n).forEach { _ in
 let sortedMember = members.sorted(by: >).joined(separator: "\n")
 
 print(sortedMember)
+
+// 시간초과
