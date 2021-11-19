@@ -2,7 +2,7 @@
 //  main.swift
 //  프로그래머스_가장큰수_Swift
 //
-//  Created by J_Min on 2021/09/20.
+//  Created by J_Min on 2021/11/16.
 //
 
 import Foundation
@@ -15,6 +15,3 @@ func solution(_ numbers: [Int]) -> String {
     }
     return sortedNumber.reduce("") { $0 + "\($1)"}
 }
-
-print(solution([3, 30, 34, 5, 9]))
-

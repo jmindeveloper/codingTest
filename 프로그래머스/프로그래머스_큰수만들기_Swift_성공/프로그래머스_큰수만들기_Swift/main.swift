@@ -60,6 +60,10 @@ func solution(_ number:String, _ k:Int) -> String {
     if count >= k {
         stack.append(contentsOf: num[i...])
     }
+    
+    if i >= num.count {
+        return stack[0..<num.count - k].reduce("") { "\($0)\($1)" }
+    }
     let result = stack.reduce("") { "\($0)\($1)" }
     return result
 }
