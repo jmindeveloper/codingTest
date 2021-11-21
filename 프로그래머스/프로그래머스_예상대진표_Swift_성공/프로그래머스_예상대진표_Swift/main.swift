@@ -13,28 +13,25 @@ func solution(_ n:Int, _ a:Int, _ b:Int) -> Int {
     var b = b
 
     while a != b {
-
-        if (a.isMultiple(of: 2) && a - 1 == b) || (!a.isMultiple(of: 2) && a + 1 == b) {
-            break
-        }
-
         if a % 2 == 0 {
             a = a / 2
         } else {
-            a = (a + 1) / 2
+            a = a / 2 + 1
         }
-        if b & 2 == 0 {
+        
+        if b % 2 == 0 {
             b = b / 2
         } else {
-            b = (b + 1)
+            b = b / 2 + 1
         }
         answer += 1
     }
-
+    
     return answer
 }
+    
 
 
 
 
-print(solution(8, 4, 5))
+print(solution(8, 4, 7))
