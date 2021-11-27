@@ -27,6 +27,7 @@ func solution(_ n: Int, _ computers: [[Int]]) -> Int {
         var isDone = false
         for i in graph {
             if i.isEmpty {
+                cnt += 1
                 print(cnt)
                 continue
             }
