@@ -7,7 +7,7 @@
 
 import Foundation
 
-// dfs
+// dfs - 깊이우선탐색
 func dfs(graph: [[Int]], v: Int, visited: inout [Bool]) {
     // 현재노드 방문처리
     visited[v] = true
@@ -26,7 +26,7 @@ var visited = Array(repeating: false, count: 9)
 print("dfs")
 dfs(graph: graph, v: 1, visited: &visited)
 
-// bfs
+// bfs - 너비우선탐색
 var queue = [Int]()
 
 func bfs(graph: [[Int]], start: Int, visited: inout [Bool]) {
