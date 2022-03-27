@@ -27,6 +27,7 @@ func strSplit(_ str: String) -> [String] {
 }
 
 func calc(_ sequence: [Int], _ operators: [String], _ formula: [String]) -> Int {
+
     var result = 0
     var formula = formula
     var stack = [String]()
@@ -35,7 +36,7 @@ func calc(_ sequence: [Int], _ operators: [String], _ formula: [String]) -> Int 
     for i in sequence {
         for element in formula {
             
-            if element == operators[sequence[i]] {
+            if element == operators[i] {
                 isCalc = true
                 continue
             } else {
@@ -59,6 +60,12 @@ func calc(_ sequence: [Int], _ operators: [String], _ formula: [String]) -> Int 
                 isCalc = false
             }
         }
+        if stack.count == 1 {
+            result = abs(Int(stack[0])!)
+        } else {
+            formula = stack
+            stack = []
+        }
     }
     return result
 }
@@ -78,5 +85,3 @@ func solution(_ expression:String) -> Int {
     
     return result
 }
-
-solution("100-200*300-500+20")
