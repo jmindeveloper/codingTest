@@ -38,7 +38,6 @@ func permutation<T>(_ elements: [T], _ k: Int) -> [[T]] {
     var visited = [Bool](repeating: false, count: elements.count)
     
     func permut(_ now: [T]) {
-        print("now --> \(now)")
         if now.count == k {
             result.append(now)
             return
@@ -56,11 +55,6 @@ func permutation<T>(_ elements: [T], _ k: Int) -> [[T]] {
 }
 
 
-print("[1, 3, 5]")
-print(combination([1, 3, 5], 2))
+//print("[1, 3, 5]")
+print(combination([1, 3, 5], 3))
 //print(permutation([1, 3, 5], 3))
-
-
-var array = [1, 2, 3]
-array.append(contentsOf: [1, 2, 3])
-print(array)
